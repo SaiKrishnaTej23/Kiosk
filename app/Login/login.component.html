@@ -1,0 +1,48 @@
+<div class="container" [class.active] = "IsLogin">
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">Login</h1>
+    <form>
+      <div class="input-container">
+        <input type="text" id="Username" name= "loginusername" [(ngModel)]="login.Username" required="required"/>
+        <label for="Username">Username</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="Password" name="loginuserpassword" [(ngModel)]="login.Password" required="required"/>
+        <label for="Password">Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button (click)="trylogin()" ><span>Go</span></button>
+      </div>
+      <div class="footer"><a href="#">Forgot your password?</a></div>
+    </form>
+  </div>
+  <div class="card alt">
+    <div class="toggle" (click) = "IsLogin = !IsLogin" ></div>
+    <h1 class="title">Register
+      <div class="close" (click) = "IsLogin = !IsLogin"></div>
+    </h1>
+    <form>
+      <div class="input-container">
+        <input type="text" id="Username" name="regusername" [(ngModel)]="register.Username" required="required"/>
+        <label for="Username">Username</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="Password" name="regpassword" [(ngModel)]="register.Password" required="required"/>
+        <label for="Password">Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="Repeat Password" name="repeatpassword" [(ngModel)]="register.RepeatPassWord" required="required"/>
+        <label for="Repeat Password">Repeat Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button (click)="tryregister()"><span>Next</span></button>
+      </div>
+    </form>
+  </div>
+</div>
